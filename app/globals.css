@@ -1,0 +1,57 @@
+@import '@tailwindcss/typography';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-cream text-slate-gray;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  a {
+    @apply transition-colors duration-250;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 md:px-8 lg:px-16 py-16 md:py-24 lg:py-32;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-luxury-600 text-warm-cream hover:bg-luxury-700 transition-colors rounded-lg font-semibold;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 bg-transparent border-2 border-luxury-600 text-luxury-600 hover:bg-luxury-50 transition-colors rounded-lg font-semibold;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-luxury-600 to-luxury-500 bg-clip-text text-transparent;
+  }
+
+  .luxury-divider {
+    @apply h-1 w-24 bg-gradient-to-r from-luxury-600 to-warm-gold;
+  }
+}
